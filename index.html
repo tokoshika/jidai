@@ -1,0 +1,203 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>時代音源</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>6年生　時代　音響　10/26/2023</h1>
+      <button onclick="reload()">リロード</button>
+      <button class="guam" id="aki">(1)秋風</button>
+      <button class="guam" id="yane">(2)屋根が崩れる</button>
+      <button class="guam" id="kanashi">(3)悲しい音楽</button>
+      <button class="guam" id="kushu">(4)空襲</button>
+      <button class="guam" id="sento">(5)戦闘音</button>
+      <button class="guam" id="sengo">(6)戦後</button>
+      <button class="guam" id="gaito">(7)街頭の音</button>
+      <button class="guam" id="guam">(8)グアムの曲</button>
+      <button class="guam" id="sato">(9)さとうきび畑</button>
+      <button class="guam" id="miagete">(10)見上げてごらん</button>
+      <button class="guam" id="tomoyos">(11)友よ</button>
+    </div>
+
+    <h2>
+      自分達で劇の練習をする時に使って下さい。
+      サーバーからのレンダリングなので、場所によっては、
+      ボタンを押してから再生までに時間がかかります。
+      一度使う前に音を鳴らして、キャッシュを作っておくと
+      使いやすいかもしれません。リロードを押すと、曲が最初に戻ります。
+    </h2>
+
+    <script>
+      // リロードボタン
+      const reload = () => {
+        bgm;
+        console.log("ok");
+        window.location.reload();
+      };
+
+      // //////////////悲しい音楽///////////////////////////////
+      const miagete = document.getElementById("miagete");
+      const miagetebgm = new Audio("./assets/miagete.mp3");
+      miagete.addEventListener("click", () => {
+        if (isPlaying) {
+          miagetebgm.pause();
+          isPlaying = false;
+          miagete.classList.remove("go");
+        } else {
+          miagetebgm.play();
+          isPlaying = true;
+          miagete.classList.add("go");
+        }
+      });
+      // //////////////悲しい音楽///////////////////////////////
+      const tomoyos = document.getElementById("tomoyos");
+      const tomoyosbgm = new Audio("./assets/tomoyoShort.wav");
+      tomoyos.addEventListener("click", () => {
+        if (isPlaying) {
+          tomoyosbgm.pause();
+          isPlaying = false;
+          tomoyos.classList.remove("go");
+        } else {
+          tomoyosbgm.play();
+          isPlaying = true;
+          tomoyos.classList.add("go");
+        }
+      });
+      // //////////////悲しい音楽///////////////////////////////
+      const sato = document.getElementById("sato");
+      const satobgm = new Audio("./assets/sato.mp3");
+      sato.addEventListener("click", () => {
+        if (isPlaying) {
+          satobgm.pause();
+          isPlaying = false;
+          sato.classList.remove("go");
+        } else {
+          satobgm.play();
+          isPlaying = true;
+          sato.classList.add("go");
+        }
+      });
+      // //////////////悲しい音楽///////////////////////////////
+      const gaito = document.getElementById("gaito");
+      const gaitobgm = new Audio("./assets/gaito.mp3");
+      gaito.addEventListener("click", () => {
+        if (isPlaying) {
+          gaitobgm.pause();
+          isPlaying = false;
+          gaito.classList.remove("go");
+        } else {
+          gaitobgm.play();
+          isPlaying = true;
+          gaito.classList.add("go");
+        }
+      });
+      // //////////////悲しい音楽///////////////////////////////
+      const sengo = document.getElementById("sengo");
+      const sengobgm = new Audio("./assets/sengo.mp3");
+      sengo.addEventListener("click", () => {
+        if (isPlaying) {
+          sengobgm.pause();
+          isPlaying = false;
+          sengo.classList.remove("go");
+        } else {
+          sengobgm.play();
+          isPlaying = true;
+          sengo.classList.add("go");
+        }
+      });
+      // //////////////悲しい音楽///////////////////////////////
+      const sento = document.getElementById("sento");
+      const sentobgm = new Audio("./assets/sento.mp3");
+      sento.addEventListener("click", () => {
+        if (isPlaying) {
+          sentobgm.pause();
+          isPlaying = false;
+          sento.classList.remove("go");
+        } else {
+          sentobgm.play();
+          isPlaying = true;
+          sento.classList.add("go");
+        }
+      });
+      // //////////////悲しい音楽///////////////////////////////
+      const kushu = document.getElementById("kushu");
+      const kushubgm = new Audio("./assets/kushu.mp3");
+      kushu.addEventListener("click", () => {
+        if (isPlaying) {
+          kushubgm.pause();
+          isPlaying = false;
+          kushu.classList.remove("go");
+        } else {
+          kushubgm.play();
+          isPlaying = true;
+          kushu.classList.add("go");
+        }
+      });
+      // //////////////悲しい音楽///////////////////////////////
+      const kanashi = document.getElementById("kanashi");
+      const kanashibgm = new Audio("./assets/kanashi.mp3");
+      kanashi.addEventListener("click", () => {
+        if (isPlaying) {
+          kanashibgm.pause();
+          isPlaying = false;
+          kanashi.classList.remove("go");
+        } else {
+          kanashibgm.play();
+          isPlaying = true;
+          kanashi.classList.add("go");
+        }
+      });
+
+      // //////////////秋風///////////////////////////////
+      const yane = document.getElementById("yane");
+      const yanebgm = new Audio("./assets/yane.mp3");
+      yane.addEventListener("click", () => {
+        if (isPlaying) {
+          yanebgm.pause();
+          isPlaying = false;
+          yane.classList.remove("go");
+        } else {
+          yanebgm.play();
+          isPlaying = true;
+          yane.classList.add("go");
+        }
+      });
+
+      // //////////////秋風///////////////////////////////
+      const aki = document.getElementById("aki");
+      const akibgm = new Audio("./assets/aki.mp3");
+      aki.addEventListener("click", () => {
+        if (isPlaying) {
+          akibgm.pause();
+          isPlaying = false;
+          aki.classList.remove("go");
+        } else {
+          akibgm.play();
+          isPlaying = true;
+          aki.classList.add("go");
+        }
+      });
+      ////////////////////////////////////////////////
+      // //////////////グアム/////////////////////////////////
+      const guam = document.getElementById("guam");
+      const bgm = new Audio("./assets/hawai.wav");
+      bgm.loop = true;
+      let isPlaying = false;
+      guam.addEventListener("click", () => {
+        if (isPlaying) {
+          bgm.pause();
+          isPlaying = false;
+          guam.classList.remove("go");
+        } else {
+          bgm.play();
+          isPlaying = true;
+          guam.classList.add("go");
+        }
+      });
+      ////////////////////////////////////////////////
+    </script>
+  </body>
+</html>
